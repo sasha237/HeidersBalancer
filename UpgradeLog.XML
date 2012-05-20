@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="GraphvizSample">
+</Property><Property Name="Solution File" Value="C:\Users\VAIO\Documents\GraphvizSample\GraphvizSample.sln">
+</Property><Property Name="Date" Value="1 сентября 2011 г.">
+</Property><Property Name="Time" Value="2:00">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="GraphvizSample.sln" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\GraphvizSample.sln">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="GraphvizSample.csproj" Description="Project file successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\GraphvizSample.csproj">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="GraphvizApi.cs" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\GraphvizApi.cs">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="MainWindow.cs" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\MainWindow.cs">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="MainWindow.Designer.cs" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\MainWindow.Designer.cs">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="Program.cs" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="MainWindow.resx" Description="File successfully backed up as C:\Users\VAIO\Documents\GraphvizSample\Backup\MainWindow.resx">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="GraphvizSample.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="GraphvizSample" Source="GraphvizSample.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="GraphvizSample.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="GraphvizSample.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="GraphvizSample" Source="GraphvizSample.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
