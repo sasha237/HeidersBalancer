@@ -110,37 +110,53 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="minus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="New.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Open.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="negative.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="positive.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="zero.png" />
+    <Content Include="Resources\calculateimg.png" />
+    <Content Include="Resources\image.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Components\Components.csproj">
       <Project>{1C3A03CA-5E55-4CC4-9746-194A4188960A}</Project>
       <Name>Components</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\None.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\positive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\render.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rightarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -45,29 +45,35 @@ namespace HeidersBalancer
                     m_EdgesStrings.Remove(el);
             }
         }
+        public double GetEdgeVal(int i1, int i2)
+        {
+            if (i1 > i2)
+                SwapInts(ref i1, ref i2);
+            double dVal = 0;
+            KeyValuePair<int, int> pp = new KeyValuePair<int, int>(i1, i2);
+            if (m_Edges.TryGetValue(pp, out dVal))
+                return dVal;
+            return 0;
+        }
+        private void SwapInts(ref int iVal1, ref int iVal2)
+        {
+            int iBuf = iVal1;
+            iVal1 = iVal2;
+            iVal2 = iBuf;
+        }
         public void SetEdgeVal(int i1, int i2, double dVal)
         {
+            if (i1 > i2)
+                SwapInts(ref i1, ref i2);
             KeyValuePair<int, int> pp = new KeyValuePair<int, int>(i1, i2);
-            if(m_Edges.ContainsKey(pp))
-            {
-                m_Edges[pp] = dVal;
-            }
-            else
-            {
-                m_Edges[pp] = dVal;
-            }
+            m_Edges[pp] = dVal;
         }
         public void SetEdgeStringVal(int i1, int i2, string sVal)
         {
+            if (i1 > i2)
+                SwapInts(ref i1, ref i2);
             KeyValuePair<int, int> pp = new KeyValuePair<int, int>(i1, i2);
-            if (m_Edges.ContainsKey(pp))
-            {
-                m_EdgesStrings[pp] = sVal;
-            }
-            else
-            {
-                m_EdgesStrings[pp] = sVal;
-            }
+            m_EdgesStrings[pp] = sVal;
         }
         public string GetVertexText(int iKey)
         {
@@ -80,6 +86,14 @@ namespace HeidersBalancer
             if (m_Edges.ContainsKey(pp))
                 return m_Edges[pp];
             return 0;
+        }
+        public void RemoveEdgeVal(int i1, int i2)
+        {
+            if (i1 > i2)
+                SwapInts(ref i1, ref i2);
+            KeyValuePair<int, int> pp = new KeyValuePair<int, int>(i1, i2);
+            m_Edges.Remove(pp);
+            m_EdgesStrings.Remove(pp);
         }
         public void SaveToFile(string sPath)
         {

@@ -108,7 +108,14 @@ namespace HeidersBalancer {
                 {
                     if (iPos == el.Key)
                         continue;
+                    Color col = Color.FromArgb(0, 0, 0);
                     ListViewItem item = listView2.Items.Add(el.Key.ToString(), el.Value, -1);
+                    double dVal = m_Inner.GetEdgeVal(iPos, el.Key);
+                    if (dVal < 0)
+                        col = Color.FromArgb((int)(255 * (-dVal)), 0, 0);
+                    else
+                        col = Color.FromArgb(0, (int)(255 * dVal), 0);
+                    item.ForeColor = col;
                     m_items2.Add(item, el.Key);
                 }
                 break;
@@ -155,6 +162,7 @@ namespace HeidersBalancer {
             if (listView1.SelectedItems.Count != 1 || listView2.SelectedItems.Count != 1)
                 return;
             m_Inner.SetEdgeVal(m_items1[listView1.SelectedItems[0]], m_items2[listView2.SelectedItems[0]], 1);
+            listView2.SelectedItems[0].ForeColor = Color.FromArgb(0, 255, 0);
             btnRender_Click(null, null);
         }
 
@@ -163,6 +171,7 @@ namespace HeidersBalancer {
             if (listView1.SelectedItems.Count != 1 || listView2.SelectedItems.Count != 1)
                 return;
             m_Inner.SetEdgeVal(m_items1[listView1.SelectedItems[0]], m_items2[listView2.SelectedItems[0]], -1);
+            listView2.SelectedItems[0].ForeColor = Color.FromArgb(255, 0, 0);
             btnRender_Click(null, null);
         }
 
@@ -171,6 +180,7 @@ namespace HeidersBalancer {
             if (listView1.SelectedItems.Count != 1 || listView2.SelectedItems.Count != 1)
                 return;
             m_Inner.SetEdgeVal(m_items1[listView1.SelectedItems[0]], m_items2[listView2.SelectedItems[0]], 0);
+            listView2.SelectedItems[0].ForeColor = Color.FromArgb(0, 0, 0);
             btnRender_Click(null, null);
         }
 
@@ -321,6 +331,15 @@ namespace HeidersBalancer {
         private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Calculate(false);
+        }
+
+        private void NoneButton_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count != 1 || listView2.SelectedItems.Count != 1)
+                return;
+            m_Inner.RemoveEdgeVal(m_items1[listView1.SelectedItems[0]], m_items2[listView2.SelectedItems[0]]);
+            listView2.SelectedItems[0].ForeColor = Color.FromArgb(0, 0, 0);
+            btnRender_Click(null, null);
         }
 	}
 }
